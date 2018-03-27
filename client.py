@@ -20,6 +20,7 @@ class CClient():
 
     def recv_data(self):
         result = self.sock.recv(1024)
+        self.sock.close()
         return result
 
     def prepare_resalt(self, result):
@@ -30,7 +31,7 @@ prep_d = cli.prepare_data()
 cli.send_data(prep_d)
 res = cli.recv_data()
 print(cli.prepare_resalt(res))
-res.self.sock.close()
+
 
 
 

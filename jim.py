@@ -2,7 +2,6 @@ import argparse
 import json
 
 
-
 def f_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('-p', '--port', default='7777')
