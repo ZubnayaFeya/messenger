@@ -21,8 +21,8 @@ class CServer():
         self.sock = sock
 
     def recv_message(self):
+        self.client_sock, addr = self.sock.accept()
         while True:
-            self.client_sock, addr = self.sock.accept()
             print("Получен запрос на соединение от {}".format(str(addr)))
             result = self.client_sock.recv(1024)
             result = jim.f_decode(result)
